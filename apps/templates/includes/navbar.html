@@ -1,9 +1,9 @@
 {% load static %}
 
-<script src="{% static 'scripts/seleccion_usuario.js' %}"></script>
+{% comment %} <script src="{% static 'scripts/seleccion_usuario.js' %}"></script> {% endcomment %}
 
 
-
+{% comment %} 
 <header>
     <div class="navbar">
         <div class="container-logo--a">
@@ -50,5 +50,46 @@
         </div>
     </div>
  
-</header>
+</header> {% endcomment %}
 
+<header>
+
+    <a href="{% url 'home' %}" class="logo">
+        <img class="logo" src="{% static 'img/logo.png' %}" alt="">
+        <h1 class="logo__titulo">BLEUT</h1>
+    </a>
+
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar">Menu</label>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="{% url 'home' %}">home</a></li>
+            <li><a href="{% url 'quienesSomos' %}">¿Quienes somos?</a></li>             
+            <li><a href="{% url 'soporte'%}">Soporte</a></li>                                 
+            </li>
+            <li><a href="{% url 'contacto'%}">Contacto</a></li>
+            {% for campo in user %}
+            {% if campo.Es_trabajador == True %}
+            <li><a href="#">Administrar +</a> 
+            <ul>
+                <li><a href="#">Oficios</a></li>
+                <li><a href="#">Licencia</a>       
+            </ul>
+            </li>
+            {% endif %}
+            {% endfor %}       
+            {% if request.user.is_authenticated %}
+            <li><a href="#"> {{request.user}}  &nbsp <i class="bi bi-person-fill"></i> </a>
+                <ul>
+                    <li><a href="{% url 'perfil' %}">Perfil</a></li>    
+                    <li><a href="{% url 'historial' %}">Historial de Contrataciones</a></li>                               
+                    <li><a href="{% url 'auth_logout' %}">Cerrar Sesion</a></li>
+                </ul>
+            {% else %}
+            <li><a href="{% url 'auth_login' %}">Iniciar Sesion</a>
+            {% endif %}   
+        </ul>
+    </nav>    
+
+</header>

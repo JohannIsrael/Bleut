@@ -3,11 +3,11 @@
 {% load static %}
 
 {% block content %}
-{% include 'includes/navbar.html' %}
+
 
 <link rel="stylesheet" href="{% static 'css/home/home_main.css' %}">
 
-<header>
+<div class="header">
     <section class="textos-header">
         <section class="textos-header">
             <h1>BLEUT es tu mejor opción!</h1>
@@ -19,7 +19,7 @@
             <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
                 style="stroke: none; fill: #fff;"></path>
         </svg></div>
-</header>
+</div>
 
     <main>
         {% for oficio in oficios %}
@@ -48,7 +48,7 @@
     <header class="Imagen1">   
     </header>
     <div class="contenedor">
-      <img src="Datos.png">  
+      <img src="{% static 'img/home/Datos.png' %}">  
     </div>
     <div class="c"></div>
     <div class="contenedor">

@@ -7,8 +7,10 @@
 
 
 
+
 body{
-    font-family: 'Roboto';
+    /* font-family: 'Roboto'; */
+    font-family: 'open sans'; 
     height: 100vh;
     /* background: linear-gradient(180deg, #F1F1FF 2%, #809BE0 70% ) ; */
     background-repeat: no-repeat;

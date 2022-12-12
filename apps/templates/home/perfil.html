@@ -2,19 +2,19 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<div>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'img/logo.png' %}" type="image/x-icon">
-</head>
+</div>
 <body>
-    {% include 'includes/navarSinBaner.html' %} 
+    {% include 'includes/navbar.html' %} 
     <title>{% block title %}Perfil{% endblock title %}</title>
 
     {% block links %}
     
-    <link rel="stylesheet" href="{% static 'css/home/navbarSinBanner.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/home/navbar.css' %}"> 
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="{% static 'css/home/perfil.css' %}">

@@ -1,5 +1,5 @@
 .boton{
-    font-family: 'roboto';
+    /* font-family: 'roboto'; */
     background: #4774fe;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #4774fe, #4774fe);
@@ -43,6 +43,7 @@ Copiar esto
 =====================================*/
 .seccion-perfil-usuario .perfil-usuario-body,
 .seccion-perfil-usuario {
+    
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;

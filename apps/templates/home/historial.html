@@ -1,0 +1,28 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<title>{% block title %}Historiales{% endblock title %}</title>
+<link rel="stylesheet" href="{% static 'css/home/historiales.css' %}">
+<main>   
+
+    <div class="Tarjeta">
+        <h1 class="titulo-historial">Historial de contrataciones</h1>
+        <div class="contrataciones">
+            <h2> 25/05/2022               Servicio de instalacion electrica realizada por Juan Guzman</h2>
+    
+        </div>
+    
+        <div class="contrataciones">
+            <h2> 05/12/2022               Servicio de pintura realizada por Pepe Pecas</h2>
+    
+        </div>
+    
+    </div>
+    
+   
+</main>
+
+{% endblock content %}

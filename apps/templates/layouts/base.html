@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {% block styles %}
-        <link rel="stylesheet" href="{% static 'css/home/navbar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home/navbar.css' %}"> 
         <link rel="stylesheet" href="{% static 'css/home/home.css' %}">      
         <link rel="stylesheet" href="{% static 'css/style_signup_cliente.css' %}">
         <link rel="stylesheet" href="{% static 'css/home/login.css' %}">
@@ -38,6 +38,7 @@
 </head>
 <body>
     
+    {% include 'includes/navbar.html' %} 
 
     {% block content %}
             {% comment %} Contenido de los templates {% endcomment %}
