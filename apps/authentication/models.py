@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class SignupUser(models.Model):
-    id_user_django = models.OneToOneField(User, on_delete=models.CASCADE, db_constraint=False ,primary_key=True)
+    id_user_django = models.OneToOneField(User, on_delete=models.CASCADE ,primary_key=True)
     cel = models.CharField(max_length=10)
     imagen = models.ImageField(default='static/assets/user/25profile_default.png',upload_to='static/assets/user/', null=True)
     ciudad = models.CharField(max_length=100, null=True, blank=False)

@@ -7,7 +7,7 @@
 {% block content %}
 {% include 'includes/navarSinBaner.html' %}
 <main class="sigc-main">
-    <form class="sigc-form" action="" method="POST" id="form">
+    <form class="sigc-form" action="" method="POST" id="form" enctype="multipart/form-data">
         {% csrf_token %}
         <div >
             <h1 class="sigc-form__titulo">Registro</h1>

@@ -28,17 +28,17 @@ def perfil(request):
     tipo_user=None 
     tipo_user = SignupUser.objects.filter(id_user_django=request.user).values()
     username = User.objects.get(username=request.user )
-
+  
     django_profile = User.objects.filter(username=username)
     perfil = SignupUser.objects.filter(id_user_django=username)
     trabajador = SignupTrabajador.objects.filter(id_user_trabajador=username).values() 
 
-    _id = SignupTrabajador.objects.annotate() 
-    idlice = _id[0].idlicencia
-    datos_licencia = Licencia.objects.filter(id=3).values()  
-    print(trabajador)
-    print(idlice)
-    print(datos_licencia) 
+    # _id = SignupTrabajador.objects.annotate() 
+    # idlice = _id[0].Estrabajador
+    # datos_licencia = Licencia.objects.filter(id=3).values()  
+    # print(trabajador)
+    # print(idlice)
+    # print(datos_licencia) 
       
     context = {       
         "msg": msg,

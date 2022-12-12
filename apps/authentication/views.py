@@ -86,7 +86,8 @@ def solicitud_trabajadores(request):
 
     if request.method == "POST":
 
-        form = Solicitud(request.POST or None, request.FILES or None, prefix='cve')        
+        form = Solicitud(request.POST or None, request.FILES or None)     
+         
 
         if  form.is_valid() and signup_form.is_valid() and customer_form.is_valid():         
             _file = form.cleaned_data.get("curriculum")          

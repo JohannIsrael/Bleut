@@ -180,6 +180,7 @@ class Solicitud(forms.Form):
             attrs={
                 "accept":".pdf",
                 "class": "sigc-input",
+                "name":"file"
             }
         )
     )
