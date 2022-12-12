@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block styles %}
+        <link rel="stylesheet" href="{% static 'css/home/navbar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home/home.css' %}">      
+        <link rel="stylesheet" href="{% static 'css/style_signup_cliente.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home/login.css' %}">
+        <link rel="stylesheet" href="{% static 'css/footer.css' %}">      
+    {% endblock styles %}
+
+    {% block real %}
+        <link rel="shortcut icon" href="{% static 'img/logo.png' %}" type="image/x-icon">
+    {% endblock real %}
+
+    {% block iconBootstrap %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    {% endblock iconBootstrap %}
+
+    {% block font %}
+    {% comment %} Raleway {% endcomment %}
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+    {% comment %} iner {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+
+    {% endblock font %}
+
+    <title>{% block title %}Bleut{% endblock title %}</title>
+</head>
+<body>
+    
+
+    {% block content %}
+            {% comment %} Contenido de los templates {% endcomment %}
+    {% endblock content %}
+    
+    {% include 'includes/footer.html' %}
+</body>
+</html>

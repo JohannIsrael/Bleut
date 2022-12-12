@@ -1,0 +1,90 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}   
+
+{% comment %} sigc = signup-cliente {% endcomment %}
+
+{% block content %}
+{% include 'includes/navarSinBaner.html' %}
+<main class="sigc-main">
+    <form class="sigc-form" action="" method="POST" id="form">
+        {% csrf_token %}
+        <div >
+            <h1 class="sigc-form__titulo">Registro</h1>
+            <div class="sigc-grupo">   
+                {{signup_form.first_name}}<span class="barra"></span>
+
+                <label class="sigc-label" for="">Nombre/s</label>
+            </div>
+            <div class="sigc-grupo">
+                {{signup_form.last_name}}<span class="barra"></span>
+                <label class="sigc-label" for="">Apellidos</label>
+            </div> 
+          
+            <div class="sigc-grupo">
+                
+                <span class="barra"></span>
+                {{customer_form.ciudad}}<label class="sigc-label" for="">Ciudad</label>
+            </div>
+
+            <div class="sigc-grupo">
+                
+                <span class="barra"></span>
+                {{customer_form.calle}}<label class="sigc-label" for="">Calle</label>
+            </div>
+            <div class="sigc-grupo">
+                
+                {{customer_form.num}}<span class="barra"></span>
+                <label class="sigc-label" for="">Número</label>
+            </div>
+
+            <div class="sigc-grupo">
+                
+                {{signup_form.email}}<span class="barra"></span>
+                <label class="sigc-label" for="">Email</label>
+            </div>
+            <div class="sigc-grupo">
+                
+                {{customer_form.cel}}<span class="barra"></span>
+                <label class="sigc-label" for="">Teléfono</label>
+            </div>
+            <div class="sigc-grupo">
+                
+                {{signup_form.username}}<span class="barra"></span>
+                <label class="sigc-label" for="">Nombre de Usuario</label>
+            </div>
+            <div class="sigc-grupo">
+                
+                {{signup_form.password1}}<span class="barra"></span>
+                <label class="sigc-label" for="">Contraseña</label>
+            </div>
+            <div class="sigc-grupo">           
+                {{signup_form.password2}}<span class="barra"></span>
+                <label class="sigc-label" for="">Confirmar Contraseña</label>
+            </div>
+
+            <div class="sigc-grupo">              
+                {{form}}<span class="barra"></span>
+                {% comment %} <label class="" for="">Curriculum</label> {% endcomment %}
+            </div>
+
+            {% if msg %}
+                <span>{{msg}}</span>
+            {% endif %}
+
+            <div class="msg_error_sign">
+                <p class="form__label">{{customer_form.name.errors}}</p> 
+                <p class="form__label">{{customer_form.last_name.errors}}</p>
+                <p class="form__label">{{signup_form.username.errors}}</p>
+                <p class="form__label">{{signup_form.email.errors}} </p>
+                <p class="form__label">{{customer_form.cel.errors}}</p>
+                <p class="form__labe">{{signup_form.password1.erros}} </p>
+                <p class="form__label">{{signup_form.password2.errors}}</p>
+            </div>
+
+            <button class="sigc-btn--submit" type="submit">Regístrate</button>
+        </div>
+    </form>
+   
+</main>
+{% endblock content %}

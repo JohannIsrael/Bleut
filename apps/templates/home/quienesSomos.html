@@ -1,0 +1,160 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+    {% include 'includes/navbar.html' %}
+
+    <title>{% block title %}¿Quienes Somos?{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/home/quienesSomos.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    {% comment %} <main>
+        
+    </main> {% endcomment %}
+
+    <body>
+
+        <header>
+            <section class="textos-header">
+                <section class="textos-header">
+                    <h1>BLEUT es tu mejor opción!</h1>
+                    <h2>Servicios de Mantenimiento al alcance de un click</h2>
+                </section>
+            </section>
+            <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                    style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #fff;"></path>
+                </svg></div>
+        </header>
+        
+        <main>
+            <section class="contenedor sobre-nosotros">
+                <h2 class="titulo">¿Quiénes Somos?</h2>
+                <div class="contenedor-sobre-nosotros">
+                    <img src="{% static 'img/quienesSomos/trabajador.webp' %}" alt="" class="imagen-about-us">
+                    <div class="contenido-textos">
+                        <h3><span>1</span>Nuestro objetivo</h3>
+                        <p>En BLEUT, nuestro objetivo es ofrecerte el mejor servicio de mantenimiento para tu 
+                            hogar que te muestre que realmente nos importas. No sólo tenemos el servicio de mantenimiento más óptimo, 
+                            sino que también podemos garantizarte la mejor calidad.
+                            
+                            
+                        </p>
+                        <h3><span>2</span>Un poco de historia</h3>
+                        <p>Comenzamos como una pequeña empresa en Morelia Michoacán y a lo largo del tiempo hemos 
+                            crecido para brindarte lo mejor. Nuestra pasión por brindarte el mejor servicio de mantenimiento, significa que ofrecemos a nuestros clientes opciones de la más alta calidad, 
+                            que están garantizados para satisfacer sus necesidades y mantenerlos satisfechos</p>
+                    </div>
+                </div>
+            </section>
+            <section class="portafolio">
+                <div class="contenedor">
+                    <h2 class="titulo">Galería</h2>
+                    <div class="galeria-port">
+                        <div class="imagen-port">
+                            <img src="{% static 'img/quienesSomos/carpinteria.webp' %}" alt="">
+                            <div class="hover-galeria">
+                                <img src="{% static 'img/quienesSomos/icono1.png' %}" alt="">
+                                <p>Nuestro trabajo</p>
+                            </div>
+                        </div>
+                        <div class="imagen-port">
+                            <img src="{% static 'img/quienesSomos/albañileria.webp' %} " alt="">
+                            <div class="hover-galeria">
+                                <img src="{% static 'img/quienesSomos/icono1.png' %}" alt="">
+                                <p>Nuestro trabajo</p>
+                            </div>
+                        </div>
+                        <div class="imagen-port">
+                            <img src="{% static 'img/quienesSomos/plomeria.webp' %}" alt="">
+                            <div class="hover-galeria">
+                                <img src="{% static 'img/quienesSomos/icono1.png' %}" alt="">
+                                <p>Nuestro trabajo</p>
+                            </div>
+                        </div>
+                        <div class="imagen-port">
+                            <img src="{% static 'img/quienesSomos/casa.webp' %}" alt="">
+                            <div class="hover-galeria">
+                                <img src="{% static 'img/quienesSomos/icono1.png' %}" alt="">
+                                <p>Nuestro trabajo</p>
+                            </div>
+                        </div>
+                        <div class="imagen-port">
+                            <img src="{% static 'img/quienesSomos/martillo.webp' %}" alt="">
+                            <div class="hover-galeria">
+                                <img src="{% static 'img/quienesSomos/icono1.png' %}" alt="">
+                                <p>Nuestro trabajo</p>
+                            </div>
+                        </div>
+                        <div class="imagen-port">
+                            <img src="{% static 'img/quienesSomos/diesño.webp' %}" alt="">
+                            <div class="hover-galeria">
+                                <img src="{% static 'img/quienesSomos/icono1.png' %}" alt="">
+                                <p>Nuestro trabajo</p>
+                            </div>
+                        </div>
+                        <div class="imagen-port">
+                            <img src="{% static 'img/quienesSomos/pintor.webp' %}" alt="">
+                            <div class="hover-galeria">
+                                <img src="{% static 'img/quienesSomos/icono1.png' %}" alt="">
+                                <p>Nuestro trabajo</p>
+                            </div>
+                        </div>
+                        <div class="imagen-port">
+                            <img src="{% static 'img/quienesSomos/jardinero.webp' %}" alt="">
+                            <div class="hover-galeria">
+                                <img src="{% static 'img/quienesSomos/icono1.png' %}" alt="">
+                                <p>Nuestro trabajo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="clientes contenedor">
+                <h2 class="titulo">Que dicen nuestros clientes</h2>
+                <div class="cards">
+                    <div class="card">
+                        <img src="{% static 'img/quienesSomos/alexdaddario.jpg' %}" alt="">
+                        <div class="contenido-texto-card">
+                            <h4>Alexandra Daddario</h4>
+                            <p>Es un excelente sitio, una gran variedad de servicios de mantenimiento de una gran calidad.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'img/quienesSomos/anyataylor.jpg' %}" alt="">
+                        <div class="contenido-texto-card">
+                            <h4>Anya Taylor Joy</h4>
+                            <p>Encantada! La respuesta fue rápida y muy confiable, un gran sitio.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about-services">
+                <div class="contenedor">
+                    <h2 class="titulo">Somos tu mejor opción!</h2>
+                    <div class="servicio-cont">
+                        <div class="servicio-ind">
+                            <img src="{% static 'img/quienesSomos/eficiencia.webp' %}" alt="">
+                            <h3>Eficiencia</h3>
+                            <p>Los servicios de mantenimiento que ofrecemos son eficientes y de calidad, todos los trabajadores están verificados</p>
+                        </div>
+                        <div class="servicio-ind">
+                            <img src="{% static 'img/quienesSomos/variedad.webp' %}" alt="">
+                            <h3>Variedad</h3>
+                            <p>Gran variedad de opciones de servicios de mantenimiento que se adaptan a tus necesidades</p>
+                        </div>
+                        <div class="servicio-ind">
+                            <img src="{% static 'img/quienesSomos/rapidez.webp' %}" alt="">
+                            <h3>Respuesta Rápida</h3>
+                            <p>Los trabajadores responden en menos de 24 horas!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+    </body>
+{% endblock content %}

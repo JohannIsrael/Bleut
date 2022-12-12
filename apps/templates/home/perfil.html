@@ -1,0 +1,166 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'img/logo.png' %}" type="image/x-icon">
+</head>
+<body>
+    {% include 'includes/navarSinBaner.html' %} 
+    <title>{% block title %}Perfil{% endblock title %}</title>
+
+    {% block links %}
+    
+    <link rel="stylesheet" href="{% static 'css/home/navbarSinBanner.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/home/perfil.css' %}">
+    {% endblock links %}
+    
+    {% block content %}  
+    
+    {% for user in tipo_user %}
+
+    {% if user.Es_trabajador == False %}
+
+    <section class="seccion-perfil-usuario">
+        <div class="perfil-usuario-header">
+            <div class="perfil-usuario-portada">
+                <div class="perfil-usuario-avatar">
+                {% for campo in datos_user %}
+                    <img src="/{{campo.imagen}}" alt="">                   
+                {% endfor %}
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <div class="perfil-usuario-body">
+            <div class="perfil-usuario-bio">
+            
+            {% for campo in django_profile %}
+                <h3 class="titulo">{{campo.username}}</h3>
+                {% comment %} <p class="texto">Estado</p> {% endcomment %}
+            </div>
+        
+            <div class="perfil-usuario-footer">
+                <h2 class="titulo">Información General</h2>
+                <ul class="lista-datos">
+                    {% comment %} <li><i class="icono fas fa-calendar-alt"></i> Fecha de Nacimiento:</li> {% endcomment %}
+                    {% comment %} <li><i class="icono fas fa-venus-mars"></i> Género:</li> {% endcomment %}
+                    <li><i class="icono fas fa-address-card"></i> Nombre(s): {{campo.first_name}}</li>
+                    <li><i class="icono fas fa-address-card"></i> Apellidos: {{campo.last_name}}</li>
+                    <li><i class="icono fas fa-envelope"></i> Correo Electrónico: {{campo.email}}</li>            
+                    <button class="boton"j>Editar Información</button>
+                </ul>
+              
+            </div>
+
+            {% endfor %}
+            
+
+            {% for campo in datos_user %}
+            
+            <div class="perfil-usuario-footer">
+                <h2 class="titulo">Información de Contacto</h2>
+                <ul class="lista-datos">           
+                    <li><i class="icono fas fa-map-marker-alt"></i>Ciudad: {{campo.ciudad}}</li>
+                    <li><i class="icono fas fa-map-marker-alt"></i> Calle: {{campo.calle}}</li>
+                    <li><i class="icono fas fa-hashtag"></i> Número: {{campo.num}}</li>
+                    {% comment %} <li><i class="icono fas fa-map-marker-alt"></i> Colonia:</li> {% endcomment %}
+                    {% comment %} <li><i class="icono fas fa-hashtag"></i> Código Postal:</li> {% endcomment %}
+                    {% comment %} <li><i class="icono fas fa-map-marker-alt"></i> Estado:</li> {% endcomment %}
+                    <li><i class="icono fas fa-phone-alt"></i> Cel: {{campo.cel}}</li>  
+                    <button class="boton"type="submit">Editar Información</button>
+                    
+                </ul>
+            </div>
+
+            {% endfor %}
+            
+        </div>
+    </section>
+                       
+    {% else %}
+
+    <section class="seccion-perfil-usuario">
+        <div class="perfil-usuario-header">
+            <div class="perfil-usuario-portada">
+                <div class="perfil-usuario-avatar">
+                {% for campo in datos_user %}
+                    <img src="/{{campo.imagen}}" alt="">                   
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="perfil-usuario-body">
+            <div class="perfil-usuario-bio">
+            {% for campo in django_profile %}
+                <h3 class="titulo">{{campo.username}}</h3>
+                {% comment %} <p class="texto">Trabajos de Calidad por Mr. Olympia</p> {% endcomment %}
+            </div>
+            <div class="perfil-usuario-footer">
+                <h2 class="titulo">Información General</h2>
+                <ul class="lista-datos">
+                    {% comment %} <li><i class="icono fas fa-calendar-alt"></i> Fecha de Nacimiento:</li>
+                    <li><i class="icono fas fa-venus-mars"></i> Género:</li>
+                    <li><i class="icono fas fa-envelope"></i> Correo Electrónico:</li> {% endcomment %}
+                    <li><i class="icono fas fa-address-card"></i> Nombre(s): {{campo.first_name}}</li>
+                    <li><i class="icono fas fa-address-card"></i> Apellidos: {{campo.last_name}}</li>
+                    <li><i class="icono fas fa-envelope"></i> Correo Electrónico: {{campo.email}}</li>
+            {% endfor %}    
+            
+            {% for campo in datos_trabajador %}
+                <li><i class="icono fas fa-address-card"></i> RFC: {{campo.RFC}}</li>
+            {% endfor %}
+                
+                    <button class="boton"type="submit">Editar Información</button>
+                </ul>       
+            </div>
+            
+            {% for campo in datos_user %}
+
+            <div class="perfil-usuario-footer">
+                <h2 class="titulo">Información de Contacto</h2>
+                <ul class="lista-datos">
+                    <li><i class="icono fas fa-map-marker-alt"></i> Ciudad: {{campo.ciudad}}</li>
+                    <li><i class="icono fas fa-map-marker-alt"></i> Calle: {{campo.calle}}</li>
+                    <li><i class="icono fas fa-hashtag"></i> Número: {{campo.num}}</li>
+                    <li><i class="icono fas fa-phone-alt"></i> Teléfono: {{campo.cel}}</li>
+                    {% comment %} <li><i class="icono fas fa-map-marker-alt"></i> Colonia:</li> {% endcomment %}
+                    {% comment %} <li><i class="icono fas fa-hashtag"></i> Código Postal:</li> {% endcomment %}
+                    
+                    {% comment %} <li><i class="icono fas fa-map-marker-alt"></i> Estado:</li> {% endcomment %}
+                    <button class="boton"type="submit">Editar Información</button>
+                    
+                </ul>
+            </div>
+
+            {% endfor %}
+            
+            <div class="perfil-usuario-footer">
+                <h2 class="titulo">Información Laboral</h2>
+                <ul class="lista-datos">
+                    <li><i class="icono fas fa-hourglass-start"></i> Horario Disponible:</li>
+                {% for campo in datos_trabajador %}
+                    <li><i class="icono fas fa-hashtag"></i> No. de Licencia: {{campo.num}}</li>
+                {% endfor %}
+                    
+                    <li><i class="icono fas fa-calendar-alt"></i> Expiración de Licencia:</li>
+                    <li><i class="icono fas fa-briefcase"></i> Oficio(s):</li>
+                    
+                    <button class="boton"type="submit">Editar Información</button>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+    {% endif %}   
+    {% endfor %}       
+    
+    {% endblock content %}
+</body>
+</html>

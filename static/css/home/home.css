@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body{
+    font-family: 'Roboto';
+    height: 100vh;
+    /* background: linear-gradient(180deg, #F1F1FF 2%, #809BE0 70% ) ; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} 
+
+
+/* :root {
+    --colorTextos: #49454567;
+} */
+
+
+
+
+
+/* main{
+    margin-top: 2em;
+    height: 70vh;
+} */
+
+/* NAVBAR */
+
+
+/* NAVBAR */
+

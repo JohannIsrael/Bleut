@@ -1,0 +1,161 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block content %}
+{% include 'includes/navbar.html' %}
+
+<link rel="stylesheet" href="{% static 'css/home/home_main.css' %}">
+
+<header>
+    <section class="textos-header">
+        <section class="textos-header">
+            <h1>BLEUT es tu mejor opción!</h1>
+            <h2>Servicios de Mantenimiento al alcance de un click</h2>
+        </section>
+    </section>
+    <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+            style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;"></path>
+        </svg></div>
+</header>
+
+    <main>
+        {% for oficio in oficios %}
+        <p>
+            <h1>Trajador {{oficio.trabajador}}</h1>
+            <h2>Oficio {{oficio.nombre}}</h2>
+            <h3>Description {{oficio.description}}</h3>
+            <h2>Horario {{oficio.horario}}</h2> 
+        </p>
+        <br>
+        {% endfor %} 
+
+        <div class="navh">
+            <nav class="navbarh">
+                <a href="#">Carpinteria</a>
+                <a href="#">Plomeria</a>
+                <a href="#">Jardineria</a>
+                <a href="#">Albañileria</a>
+                <a href="#">Pintor</a>
+                <a href="#">Fumigadores</a>
+                <a href="#">Electricistas</a>
+                <a href="#">Mas oficios</a>
+            </nav>
+            <hr>
+        </div>
+    <header class="Imagen1">   
+    </header>
+    <div class="contenedor">
+      <img src="Datos.png">  
+    </div>
+    <div class="c"></div>
+    <div class="contenedor">
+        <h1>Trabajadores destacados</h1>
+    </div>
+    <div class="a">
+        <div class="b">
+            <div class="card">
+                <div class="head">
+                    <div class="circle"></div>
+                    <div class="img">
+                        <img src="Pika.jpg" alt="">
+                    </div>
+                </div>
+            
+                <div class="description">
+                    <h3>CHUKAPI GONZALES</h3>
+                    <h4>Electricista</h4>
+                    <p>10 años de experencia en instalaciones electricas !</p>
+                </div>
+            
+                <div class="contact">
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="b">
+            <div class="card">
+                <div class="head">
+                    <div class="circle"></div>
+                    <div class="img">
+                        <img src="Mishi albañil.jpg" alt="">
+                    </div>
+                </div>
+            
+                <div class="description">
+                    <h3>Misifu Rodriguez</h3>
+                    <h4>albañil</h4>
+                    <p>Experto albañil , le gusta la coca con pan</p>
+                </div>
+            
+                <div class="contact">
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="b">
+            <div class="card">
+                <div class="head">
+                    <div class="circle"></div>
+                    <div class="img">
+                        <img src="Mishi electricista.jpg" alt="">
+                    </div>
+                </div>
+            
+                <div class="description">
+                    <h3>Solovino Martinez</h3>
+                    <h4>Electricista</h4>
+                    <p>Experto en solucionar cortes eletricos</p>
+                </div>
+            
+                <div class="contact">
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="b">
+            <div class="card">
+                <div class="head">
+                    <div class="circle"></div>
+                    <div class="img">
+                        <img src="mishi fumigador.jpg" alt="">
+                    </div>
+                </div>
+            
+                <div class="description">
+                    <h3>Whiska Guzman</h3>
+                    <h4>fumigador</h4>
+                    <p>Experto en terminar plagas de ratas</p>
+                </div>
+            
+                <div class="contact">
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="b">
+            <div class="card">
+                <div class="head">
+                    <div class="circle"></div>
+                    <div class="img">
+                        <img src="El pelos.jpg" alt="">
+                    </div>
+                </div>
+            
+                <div class="description">
+                    <h3>Juan Rodriguez</h3>
+                    <h4>Pintor</h4>
+                    <p>Experto en pintar interiores , a veces ladra</p>
+                </div>
+            
+                <div class="contact">
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+            
+    </div>    
+    </main>
+{% endblock content %}
