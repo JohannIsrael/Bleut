@@ -47,6 +47,7 @@
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    margin-bottom: 2em;
 }
 
 
@@ -134,6 +135,7 @@
 }
 
 .a{
+    margin-top: -10em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -142,10 +144,11 @@
 
 .Imagen1{
     height: fit-content;
-    background: url(Trabajadores.jpg) no-repeat center;
+    background: url(../../img/home/Trabajadores.jpg) no-repeat center;
     background-size: cover;
 }
 .contenedor{
+    
     border: 2px solid rgba(255, 255, 255, 0);
     margin: 20px;
     padding: 20px;
@@ -153,6 +156,7 @@
     width: auto;
     align-items: stretch;
     text-align: center;
+    margin-bottom: 10em;
 }
 
 

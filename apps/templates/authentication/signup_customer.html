@@ -5,7 +5,7 @@
 {% comment %} sigc = signup-cliente {% endcomment %}
 
 {% block content %}
-{% include 'includes/navarSinBaner.html' %}
+{% comment %} {% include 'includes/navarSinBaner.html' %} {% endcomment %}
 <main class="sigc-main">
     <form class="sigc-form" action="" method="POST" id="form">
         {% csrf_token %}

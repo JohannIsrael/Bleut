@@ -1,109 +1,131 @@
 @import url(header.css);
 
-a:visited, a:link a:active{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0);
-}
-
-.navbar{    
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-}
-
-
-.nav_links-container{
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-    align-items: center;  
-    width: 82vw;
-}
-
-.nav_links-element{
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-    border: 1px solid black;
-    border-radius: 100px;
-    width: 17em;
-    height: 4em;
-}
+    header{
+        position: fixed;
+        top: 0; left: 0; right:0;    
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .1);  
+        background-color: #b6b6c0; 
+        opacity: 95%;
+        padding: 0px 7% ;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+    }
 
 
-.nav_links-element > a{
-    text-decoration: none;
-    font-size: 1.7em;
-    font-family: 'Secular One', sans-serif;
-    font-style: italic;
-    font-weight: 400;
-}
+    
+    
+    header .logo{
+        display: flex;
+        align-items: center;
+        font-weight: bolder ;
+        font-size: 25px;
+        color: rgb(0, 0, 0);
+    }
 
-/* .nav_links-element > a:visited{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0);
-} */
-
-.nav_links-element--login{  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    border-radius: 100px;
-    width: 9em;
-    height: 3em;
-}
-
-.container-login--a{   
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: 1.7em;
-    font-family: 'Secular One', sans-serif;
-    font-style: italic;
-    font-weight: 400;
-}
-
-/* .container--login > a:visited{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0);
-} */
-
-.nav_links-element--small{
-    width: 10em;
-}
-
-.bi{
-    font-size: 3em;
-}
-
-.container-logo{
-    display: flex;
-    align-self: baseline;
-    justify-content: baseline;
-    gap: 10px;
-}
-
-.container-logo > h1{  
-    align-self: center;
-    font-family: 'Secular One', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2.5em;
-}
-
-
-.container-logo > img{
-    object-fit: fill;
-    width: 7em;
-    height: fit-content;
-    border-radius: 58px;
-}
-
-.container-logo--a > a:visited {   
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0);
-}
-
-
-
+    .logo > img{
+        height: 90px;
+        border-radius: 50%;
+    }
+    
+    header .navbar ul{
+        list-style: none;
+    }
+    
+    header .navbar ul li{
+        position: relative;
+        float: left;
+    }
+    header .navbar ul li a{
+        font-size: 20px;
+        padding: 20px;
+        color: rgb(0, 0, 0);
+        display: block;
+        font-weight: bold
+    }
+    header .navbar ul li a:hover{
+        background: #333;
+        color: #ffffff;
+    }
+    
+    header .navbar ul li ul{
+        position: absolute;
+        left: 0;
+        width: 200px;
+        background: #fff;
+        display: none;
+    }
+    header .navbar ul li ul li{
+        width: 100%;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+    
+    }
+    
+    header .navbar ul li ul li ul{
+        left: 200px;
+        top: 0;
+    }
+    header .navbar ul li:focus-within > ul,
+    header .navbar ul li:hover > ul{
+        display: initial;
+    }
+    
+    #menu-bar{
+        display: none;
+    }
+    
+    header label{
+        font-size: 20px;
+        color: #333;
+        cursor: pointer;
+        display: none;
+    }
+  
+    
+    @media(max-width:991px){
+    
+    header{
+        padding: 20px;
+    }
+    
+    header label{
+    display:initial;
+    }
+    
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        display:none ;
+    }
+    
+    header .navbar ul li{
+        width: 100%;
+    }
+    
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+    
+    header .navbar ul li ul li{
+        background: #eee;
+    }
+    
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+    
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+    
+    
+    
+    
+    
+    }
+    

@@ -29,7 +29,8 @@ def view_login(request):
     return render(request,'authentication/login.html',{"form":form, "msg":msg})
 
 def logout_view(request):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated:       
+         
         logout(request)   
     return redirect('home')
 
@@ -86,7 +87,8 @@ def solicitud_trabajadores(request):
 
     if request.method == "POST":
 
-        form = Solicitud(request.POST or None, request.FILES or None, prefix='cve')        
+        form = Solicitud(request.POST or None, request.FILES or None)     
+         
 
         if  form.is_valid() and signup_form.is_valid() and customer_form.is_valid():         
             _file = form.cleaned_data.get("curriculum")          
