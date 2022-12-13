@@ -69,7 +69,7 @@
             <li><a href="{% url 'soporte'%}">Soporte</a></li>                                 
             </li>
             <li><a href="{% url 'contacto'%}">Contacto</a></li>
-            {% for campo in user %}
+            {% comment %} {% for campo in user %}
             {% if campo.Es_trabajador == True %}
             <li><a href="#">Administrar +</a> 
             <ul>
@@ -78,7 +78,7 @@
             </ul>
             </li>
             {% endif %}
-            {% endfor %}       
+            {% endfor %}        {% endcomment %}
             {% if request.user.is_authenticated %}
             <li><a href="#"> {{request.user}}  &nbsp <i class="bi bi-person-fill"></i> </a>
                 <ul>

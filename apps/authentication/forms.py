@@ -72,7 +72,8 @@ class SignUpForm(UserCreationForm):
         widget=forms.EmailInput(
             attrs={
                 "placeholder":"",
-                "class":"sigc-input"
+                "class":"sigc-input",
+                "maxlength":"256",
             } 
         )
     )
@@ -111,10 +112,12 @@ class CustomerForm(forms.ModelForm):
         
         label='',
         required=False,
-        widget=forms.NumberInput(
+        widget=forms.TextInput(
             attrs={
                 "placeholder": "",
                 "class": "sigc-input",
+                "minlength":"10",
+                "maxlength":"10",
             }
         )
     )
@@ -123,10 +126,11 @@ class CustomerForm(forms.ModelForm):
         # label='Cel',
         label='',
         required=False,
-        widget=forms.NumberInput(
+        widget=forms.TextInput(
             attrs={
                 "placeholder": "",
                 "class": "sigc-input",
+                "maxlength":"10",
             }
         )
     )

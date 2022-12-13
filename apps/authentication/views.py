@@ -29,7 +29,8 @@ def view_login(request):
     return render(request,'authentication/login.html',{"form":form, "msg":msg})
 
 def logout_view(request):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated:       
+         
         logout(request)   
     return redirect('home')
 

@@ -9,23 +9,23 @@ from django.db.models import Count
 # Create your views here.
 def home(request):
     oficios = Oficio_trabajador.objects.all()
-
-    if request.user.is_authenticated:
-        tipo_user = SignupUser.objects.filter(id_user_django=request.user)   
-    
-    return render(request,'home/home.html',{"oficios":oficios, "user":tipo_user})
+    return render(request,'home/home.html',{"oficios":oficios, })
 
 def quienes_somos(request):
+      
     return render(request,'home/quienesSomos.html',{})
 
-def soporte(request):
+def soporte(request):  
     return render(request, 'home/soporte.html',{})
 
 def contacto(request):
+   
     return render(request, 'home/contacto.html',{})
 
-@login_required(login_url='home')
+@login_required(login_url='auth_login')
 def perfil(request):
+
+
 
     msg=None
     tipo_user=None 
@@ -55,13 +55,13 @@ def perfil(request):
 
     return render(request, 'home/perfil.html',context)
 
-
-@login_required(login_url='home')
+@login_required(login_url='auth_login')
 def historiales(request):
     tipo_user = SignupUser.objects.filter(id_user_django=request.user)
 
     context = {               
         "tipo_user":tipo_user,
+        "user":tipo_user,
     }
 
 
